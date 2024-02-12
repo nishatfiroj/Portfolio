@@ -4,5 +4,7 @@ export type TarotCardContent = {
   svg: StaticImageData
   altText: string
   yearsOfExperience: number
-  githubLinks?: string[]
+  githubLinks: string[]
+  quote: string
+  labelSvg?: StaticImageData
 }

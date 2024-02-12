@@ -1,18 +1,22 @@
 import { TarotCardContent } from "@/utils/types"
 import Image from "next/image"
 
+const iconArray = ["①", "②", "③", "④", "⑤"]
+
 export default function TarotCard({
   svg,
   altText,
   yearsOfExperience,
   githubLinks,
+  quote,
 }: TarotCardContent) {
+  console.log(githubLinks)
   return (
     <div style={{ position: "relative" }}>
       <div
         style={{
-          position: "absolute",
           top: "64px",
+          position: "absolute",
           left: 0,
           right: 0,
           marginLeft: "auto",
@@ -26,27 +30,32 @@ export default function TarotCard({
       <div
         style={{
           position: "absolute",
-          top: "180px",
+          top: "200px",
           left: 0,
           right: 0,
           marginLeft: "auto",
           marginRight: "auto",
-          width: "200px",
+          width: "180px",
         }}
       >
         <p>Years experience: {yearsOfExperience}</p>
         <p>
-          {githubLinks ? "Github links: " : null}
+          Github links:
           {githubLinks?.map((link, i) => (
             <a
               href={link}
               key={`github-link-${i}`}
-              style={{ color: "skyblue", textDecoration: "none" }}
+              style={{
+                color: "black",
+                textDecoration: "none",
+                padding: "0 4px",
+              }}
             >
-              ({i})
+              {iconArray[i]}
             </a>
           ))}
         </p>
+        <i>{quote}</i>
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <TarotCardSvg />

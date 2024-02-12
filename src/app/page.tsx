@@ -109,12 +109,40 @@ export default function Home() {
           }}
         >
           {tarotCards.map((tarotCard: TarotCardContent, i: number) => (
-            <TarotCard
+            <div
               key={i}
-              svg={tarotCard.svg}
-              altText={tarotCard.altText}
-              yearsOfExperience={tarotCard.yearsOfExperience}
-            />
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <TarotCard
+                svg={tarotCard.svg}
+                altText={tarotCard.altText}
+                yearsOfExperience={tarotCard.yearsOfExperience}
+                githubLinks={tarotCard.githubLinks}
+                quote={tarotCard.quote}
+              />
+              <div style={{ position: "relative" }}>
+                <p
+                  style={{
+                    position: "absolute",
+                    left: 0,
+                    right: 0,
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                    width: tarotCard.labelSvg?.width,
+                  }}
+                >
+                  <Image
+                    src={tarotCard.labelSvg!}
+                    alt={`${tarotCard.altText}, handwritten`}
+                  />
+                </p>
+                <Tape large />
+              </div>
+            </div>
           ))}
         </div>
       </div>
