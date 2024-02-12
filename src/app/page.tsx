@@ -16,6 +16,9 @@ import self from "../../public/self.png"
 import nishatsWorkspace from "../../public/svg/nishatsWorkspace.svg"
 import fullstackDevStamp from "../../public/svg/fullstackDevStamp.svg"
 import webDevStamp from "../../public/svg/webDevStamp.svg"
+import spotifyCard from "../../public/svg/spotifyCard.svg"
+import jupiterCard from "../../public/svg/jupiterCard.svg"
+import ncrCard from "../../public/svg/ncrCard.svg"
 
 // assets
 import { tarotCards } from "../utils/assets"
@@ -145,6 +148,19 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Third section */}
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <Image src={spotifyCard} alt="Spotify card" />
+        <Image src={jupiterCard} alt="Jupiter card" />
+        <Image src={ncrCard} alt="Ncr card" />
       </div>
     </Base>
   )

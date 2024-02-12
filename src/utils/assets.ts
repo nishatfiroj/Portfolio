@@ -18,31 +18,31 @@ export const tarotCards: TarotCardContent[] = [
   {
     svg: nextJs,
     altText: "NextJS logo",
-    yearsOfExperience: 6,
+    yearsOfExperience: 3,
     githubLinks: [
       "https://github.com/nishatfiroj/jupiter",
       "https://github.com/nishatfiroj/call-your-reps",
     ],
-    quote: "a fave, she's so cute",
+    quote: "Long time passion, most likely to opt in for this one",
     labelSvg: nextJsByMe,
   },
   {
     svg: react,
     altText: "React logo",
-    yearsOfExperience: 6,
+    yearsOfExperience: 5,
     githubLinks: ["https://github.com/nishatfiroj/TheGerrymanderingApp"],
-    quote: "",
+    quote: "An OG, most likely to know the lore of this one",
     labelSvg: reactByMe,
   },
   {
     svg: nodeJs,
     altText: "NodeJS logo",
-    yearsOfExperience: 6,
+    yearsOfExperience: 5,
     githubLinks: [
       "https://github.com/nishatfiroj/TheGerrymanderingApp",
       "https://github.com/nishatfiroj/Collab-Web-Page",
     ],
-    quote: "",
+    quote: "Always there by default, most likely to just... be there",
     labelSvg: nodeJsByMe,
   },
   {
@@ -50,7 +50,7 @@ export const tarotCards: TarotCardContent[] = [
     altText: "TypeScript logo",
     yearsOfExperience: 4,
     githubLinks: ["https://github.com/nishatfiroj/wordle"],
-    quote: "",
+    quote: "An absolute favorite, most likely to be strongly typed code",
     labelSvg: typescriptByMe,
   },
   {
@@ -58,15 +58,16 @@ export const tarotCards: TarotCardContent[] = [
     altText: "HTML & CSS logo",
     yearsOfExperience: 6,
     githubLinks: ["https://github.com/nishatfiroj/TWINE-Inspired-Stories"],
-    quote: "",
+    quote: "The building blocks, most likely to be reliable (till it's not)",
     labelSvg: htmlCssByMe,
   },
   {
     svg: java,
     altText: "Java logo",
-    yearsOfExperience: 6,
+    yearsOfExperience: 4,
     githubLinks: ["https://github.com/nishatfiroj/Chess-Components"],
-    quote: "",
+    quote:
+      "The teacher of all (read: most) concepts, most likely to be a nostalgic one",
     labelSvg: javaByMe,
   },
 ]
