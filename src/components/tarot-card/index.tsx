@@ -30,7 +30,7 @@ export default function TarotCard({
       <div
         style={{
           position: "absolute",
-          top: "200px",
+          top: "190px",
           left: 0,
           right: 0,
           marginLeft: "auto",
@@ -38,8 +38,10 @@ export default function TarotCard({
           width: "180px",
         }}
       >
-        <p>Years experience: {yearsOfExperience}</p>
-        <p>
+        <p style={{ lineHeight: "10px" }}>
+          Years experience: {yearsOfExperience}
+        </p>
+        <p style={{ lineHeight: "10px" }}>
           Github links:
           {githubLinks?.map((link, i) => (
             <a
@@ -55,7 +57,7 @@ export default function TarotCard({
             </a>
           ))}
         </p>
-        <i>{quote}</i>
+        <i style={{ lineHeight: "10px", fontSize: "14px" }}>{quote}</i>
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <TarotCardSvg />
