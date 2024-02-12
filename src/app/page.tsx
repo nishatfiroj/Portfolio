@@ -5,6 +5,8 @@ import Image from "next/image"
 
 // custom components
 import Base from "@/components/base"
+import TarotCard from "@/components/tarot-card"
+import Tape from "@/components/tape"
 
 // styled-components
 import { Card } from "./styled"
@@ -14,7 +16,10 @@ import self from "../../public/self.png"
 import nishatsWorkspace from "../../public/svg/nishatsWorkspace.svg"
 import fullstackDevStamp from "../../public/svg/fullstackDevStamp.svg"
 import webDevStamp from "../../public/svg/webDevStamp.svg"
-import Tape from "@/components/tape"
+
+// assets
+import { tarotCards } from "../utils/assets"
+import { TarotCardContent } from "@/utils/types"
 
 export default function Home() {
   return (
@@ -38,9 +43,7 @@ export default function Home() {
           }}
         >
           <div style={{ position: "relative" }}>
-            <div style={{ position: "absolute", top: "-16px" }}>
-              <Tape />
-            </div>
+            <Tape top="-16px" />
             <Card>
               <Image
                 src={self}
@@ -51,9 +54,8 @@ export default function Home() {
             </Card>
           </div>
           <div style={{ position: "relative" }}>
-            <div style={{ position: "absolute", top: "-16px", right: 0 }}>
-              <Tape />
-            </div>
+            <Tape top="-16px" right="0px" />
+
             <Card>
               <Image src={nishatsWorkspace} alt="Nishat's workspace" />
             </Card>
@@ -87,6 +89,33 @@ export default function Home() {
             width={104}
             height={104}
           />
+        </div>
+      </div>
+
+      {/* Second section */}
+      <div>
+        <div>
+          <p style={{ opacity: "40%", textAlign: "center" }}>
+            ...swipe left for more
+          </p>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            overflow: "scroll",
+            gap: "48px",
+            padding: "0 48px",
+            scrollSnapType: "x mandatory",
+          }}
+        >
+          {tarotCards.map((tarotCard: TarotCardContent, i: number) => (
+            <TarotCard
+              key={i}
+              svg={tarotCard.svg}
+              altText={tarotCard.altText}
+              yearsOfExperience={tarotCard.yearsOfExperience}
+            />
+          ))}
         </div>
       </div>
     </Base>
