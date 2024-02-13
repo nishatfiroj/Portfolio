@@ -14,7 +14,7 @@ export default function Paper({
           position: "absolute",
           left: 0,
           right: 0,
-          top: "108px",
+          top: "80px",
           marginLeft: "auto",
           marginRight: "auto",
           width: "280px",

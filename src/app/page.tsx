@@ -34,8 +34,8 @@ import Paper from "@/paper"
 export default function Home() {
   const generateExperiences = (workExperiences: WorkExperience[]) =>
     workExperiences.map((experience: WorkExperience, i: number) => (
-      <div key={i}>
-        <h6>{experience.title}</h6>
+      <div key={i} style={{ padding: "8px 0" }}>
+        <h4>{experience.title}</h4>
         <p>{experience.description}</p>
       </div>
     ))
