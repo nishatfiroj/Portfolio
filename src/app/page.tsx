@@ -173,17 +173,26 @@ export default function Home() {
           padding: "64px 0",
         }}
       >
-        <Image src={spotifyCard} alt="Spotify card" />
+        <div style={{ position: "relative" }}>
+          <Tape top="-12px" right="12px" />
+          <Image src={spotifyCard} alt="Spotify card" />
+        </div>
         <Paper large>{generateExperiences(spotifyWorkExperiences)}</Paper>
 
         <div style={{ padding: "64px 0" }} />
 
-        <Image src={jupiterCard} alt="Jupiter card" />
+        <div style={{ position: "relative" }}>
+          <Tape top="-12px" left="24px" />
+          <Image src={jupiterCard} alt="Jupiter card" />
+        </div>
         <Paper>{generateExperiences(jupiterWorkExperiences)}</Paper>
 
         <div style={{ padding: "64px 0" }} />
 
-        <Image src={ncrCard} alt="Ncr card" />
+        <div style={{ position: "relative" }}>
+          <Tape top="-12px" left="32px" />
+          <Image src={ncrCard} alt="Ncr card" />
+        </div>
         <Paper>{generateExperiences(ncrWorkExperiences)}</Paper>
       </div>
     </Base>
