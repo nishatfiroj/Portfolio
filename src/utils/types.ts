@@ -8,3 +8,8 @@ export type TarotCardContent = {
   quote: string
   labelSvg?: StaticImageData
 }
+
+export type WorkExperience = {
+  title: string
+  description: string
+}

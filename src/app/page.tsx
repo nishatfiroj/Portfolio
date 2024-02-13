@@ -16,15 +16,29 @@ import self from "../../public/self.png"
 import nishatsWorkspace from "../../public/svg/nishatsWorkspace.svg"
 import fullstackDevStamp from "../../public/svg/fullstackDevStamp.svg"
 import webDevStamp from "../../public/svg/webDevStamp.svg"
+import systemDesignerStamp from "../../public/svg/systemDesignerStamp.svg"
 import spotifyCard from "../../public/svg/spotifyCard.svg"
 import jupiterCard from "../../public/svg/jupiterCard.svg"
 import ncrCard from "../../public/svg/ncrCard.svg"
 
 // assets
-import { tarotCards } from "../utils/assets"
-import { TarotCardContent } from "@/utils/types"
+import {
+  jupiterWorkExperiences,
+  ncrWorkExperiences,
+  spotifyWorkExperiences,
+  tarotCards,
+} from "../utils/assets"
+import { TarotCardContent, WorkExperience } from "@/utils/types"
+import Paper from "@/paper"
 
 export default function Home() {
+  const generateExperiences = (workExperiences: WorkExperience[]) =>
+    workExperiences.map((experience: WorkExperience, i: number) => (
+      <div key={i}>
+        <h6>{experience.title}</h6>
+        <p>{experience.description}</p>
+      </div>
+    ))
   return (
     <Base>
       {/* First section */}
@@ -87,7 +101,7 @@ export default function Home() {
             height={104}
           />
           <Image
-            src={fullstackDevStamp}
+            src={systemDesignerStamp}
             alt="System designer"
             width={104}
             height={104}
@@ -96,7 +110,7 @@ export default function Home() {
       </div>
 
       {/* Second section */}
-      <div>
+      <div style={{ padding: "64px 0" }}>
         <div>
           <p style={{ opacity: "40%", textAlign: "center" }}>
             ...swipe left for more
@@ -156,11 +170,21 @@ export default function Home() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          padding: "64px 0",
         }}
       >
         <Image src={spotifyCard} alt="Spotify card" />
+        <Paper large>{generateExperiences(spotifyWorkExperiences)}</Paper>
+
+        <div style={{ padding: "64px 0" }} />
+
         <Image src={jupiterCard} alt="Jupiter card" />
+        <Paper>{generateExperiences(jupiterWorkExperiences)}</Paper>
+
+        <div style={{ padding: "64px 0" }} />
+
         <Image src={ncrCard} alt="Ncr card" />
+        <Paper>{generateExperiences(ncrWorkExperiences)}</Paper>
       </div>
     </Base>
   )

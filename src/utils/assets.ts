@@ -1,4 +1,4 @@
-import { TarotCardContent } from "@/utils/types"
+import { TarotCardContent, WorkExperience } from "@/utils/types"
 
 // svg logos
 import react from "../../public/svg/react.svg"
@@ -23,7 +23,7 @@ export const tarotCards: TarotCardContent[] = [
       "https://github.com/nishatfiroj/jupiter",
       "https://github.com/nishatfiroj/call-your-reps",
     ],
-    quote: "Long time passion, most likely to opt in for this one",
+    quote: "Long time passion, most likely to opt for this one",
     labelSvg: nextJsByMe,
   },
   {
@@ -69,5 +69,39 @@ export const tarotCards: TarotCardContent[] = [
     quote:
       "The teacher of all (read: most) concepts, most likely to be a nostalgic one",
     labelSvg: javaByMe,
+  },
+]
+
+export const spotifyWorkExperiences: WorkExperience[] = [
+  {
+    title: "Listening Parties",
+    description:
+      "I built a brand new experience for Spotify fans with Listening Parties, in under 6 months, to enable artists to connect with their fans, earn thousands of dollars and create new streams of revenue for Spotify.",
+  },
+  {
+    title: "shop.spotify.com",
+    description:
+      "i deployed regular maintenance of Spotify’s merchandise store, including maintenance of the Shopify integration, UTM attribution mapping, and user behavior instrumentation, with changes affecting millions of users and generating 40 million dollars during my tenure",
+  },
+]
+
+export const jupiterWorkExperiences: WorkExperience[] = [
+  {
+    title: "Jupiter Magazine",
+    description:
+      "Jupiter Magazine is a quarterly magazine promoting Black art, literature, and culture in NYC, with thousands of monthly readers. this online publication highlights renowned Black New York Times best selling authors, NYT staff writers, The Republic Magazine authors, and more, via a NextJS web application and PostgreSQL.",
+  },
+]
+
+export const ncrWorkExperiences: WorkExperience[] = [
+  {
+    title: "Design Systems",
+    description:
+      "I designed and coded in all iterations of NCR design systems, with combined 100k+ component insertions for both NPM and Figma libraries.",
+  },
+  {
+    title: "Figma Plugins",
+    description:
+      "I assisted designers and developers with white labeling components by creating plugins that sped up the design process for the entire UI/UX department.",
   },
 ]
