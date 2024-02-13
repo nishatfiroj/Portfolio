@@ -20,6 +20,8 @@ import systemDesignerStamp from "../../public/svg/systemDesignerStamp.svg"
 import spotifyCard from "../../public/svg/spotifyCard.svg"
 import jupiterCard from "../../public/svg/jupiterCard.svg"
 import ncrCard from "../../public/svg/ncrCard.svg"
+import clickForMore from "../../public/svg/clickForMore.svg"
+import stickyNote from "../../public/svg/stickyNote.svg"
 
 // assets
 import {
@@ -177,7 +179,35 @@ export default function Home() {
           <Tape top="-12px" right="12px" />
           <Image src={spotifyCard} alt="Spotify card" />
         </div>
-        <Paper large>{generateExperiences(spotifyWorkExperiences)}</Paper>
+        <div style={{ position: "relative" }}>
+          <Paper large>{generateExperiences(spotifyWorkExperiences)}</Paper>
+          <div
+            style={{
+              position: "absolute",
+              bottom: "-32px",
+              left: 24,
+              transform: "rotate(-5deg)",
+            }}
+          >
+            <Image
+              src={stickyNote}
+              alt="Learn more about Spotify experiences"
+            />
+          </div>
+          <div
+            style={{
+              position: "absolute",
+              bottom: "0px",
+              left: 48,
+              transform: "rotate(-5deg)",
+            }}
+          >
+            <Image
+              src={clickForMore}
+              alt="Learn more about Spotify experiences"
+            />
+          </div>
+        </div>
 
         <div style={{ padding: "64px 0" }} />
 
@@ -185,7 +215,35 @@ export default function Home() {
           <Tape top="-12px" left="24px" />
           <Image src={jupiterCard} alt="Jupiter card" />
         </div>
-        <Paper>{generateExperiences(jupiterWorkExperiences)}</Paper>
+        <div style={{ position: "relative" }}>
+          <Paper>{generateExperiences(jupiterWorkExperiences)}</Paper>
+          <div
+            style={{
+              position: "absolute",
+              bottom: "-64px",
+              right: 12,
+              transform: "rotate(10deg)",
+            }}
+          >
+            <Image
+              src={stickyNote}
+              alt="Learn more about Jupiter experiences"
+            />
+          </div>
+          <div
+            style={{
+              position: "absolute",
+              bottom: "-24px",
+              right: 24,
+              transform: "rotate(10deg)",
+            }}
+          >
+            <Image
+              src={clickForMore}
+              alt="Learn more about Jupiter experiences"
+            />
+          </div>
+        </div>
 
         <div style={{ padding: "64px 0" }} />
 
@@ -193,7 +251,30 @@ export default function Home() {
           <Tape top="-12px" left="32px" />
           <Image src={ncrCard} alt="Ncr card" />
         </div>
-        <Paper>{generateExperiences(ncrWorkExperiences)}</Paper>
+        <div style={{ position: "relative" }}>
+          <Paper>{generateExperiences(ncrWorkExperiences)}</Paper>
+
+          <div
+            style={{
+              position: "absolute",
+              bottom: "-64px",
+              left: 16,
+              transform: "rotate(-10deg)",
+            }}
+          >
+            <Image src={stickyNote} alt="Learn more about NCR experiences" />
+          </div>
+          <div
+            style={{
+              position: "absolute",
+              bottom: "-24px",
+              left: 32,
+              transform: "rotate(-10deg)",
+            }}
+          >
+            <Image src={clickForMore} alt="Learn more about NCR experiences" />
+          </div>
+        </div>
       </div>
     </Base>
   )
