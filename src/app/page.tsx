@@ -13,7 +13,8 @@ import { Card } from "./styled"
 
 // pngs & svgs
 import self from "../../public/self.png"
-import nishatsWorkspace from "../../public/svg/nishatsWorkspace.svg"
+import nishatsPortfolio from "../../public/svg/nishatsPortfolio.svg"
+import nishatDescriptor from "../../public/svg/nishatDescriptor.svg"
 import fullstackDevStamp from "../../public/svg/fullstackDevStamp.svg"
 import webDevStamp from "../../public/svg/webDevStamp.svg"
 import systemDesignerStamp from "../../public/svg/systemDesignerStamp.svg"
@@ -32,6 +33,7 @@ import {
 } from "../utils/assets"
 import { TarotCardContent, WorkExperience } from "@/utils/types"
 import Paper from "@/paper"
+import Link from "next/link"
 
 export default function Home() {
   const generateExperiences = (workExperiences: WorkExperience[]) =>
@@ -63,20 +65,32 @@ export default function Home() {
         >
           <div style={{ position: "relative" }}>
             <Tape top="-16px" />
-            <Card>
+            <Card
+              style={{
+                width: "160px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: "16px",
+              }}
+            >
+              <Image src={self} alt="Photo of Nishat (me)" width={130} />
               <Image
-                src={self}
-                alt="Photo of Nishat (me)"
-                width={120}
-                height={140}
+                src={nishatsPortfolio}
+                alt="Nishat's portfolio"
+                height={50}
               />
             </Card>
           </div>
           <div style={{ position: "relative" }}>
             <Tape top="-16px" right="0px" />
 
-            <Card>
-              <Image src={nishatsWorkspace} alt="Nishat's workspace" />
+            <Card
+              style={{
+                width: "160px",
+              }}
+            >
+              <Image src={nishatDescriptor} alt="" width={178} height={102} />
             </Card>
           </div>
         </div>
@@ -85,7 +99,7 @@ export default function Home() {
           style={{
             display: "flex",
             flexDirection: "column",
-            gap: "8px",
+            gap: "12px",
             maxWidth: "104px",
             justifyContent: "center",
           }}
@@ -93,20 +107,20 @@ export default function Home() {
           <Image
             src={fullstackDevStamp}
             alt="Fullstack developer"
-            width={104}
-            height={104}
+            width={120}
+            height={120}
           />
           <Image
             src={webDevStamp}
             alt="Web developer"
-            width={104}
-            height={104}
+            width={120}
+            height={120}
           />
           <Image
             src={systemDesignerStamp}
             alt="System designer"
-            width={104}
-            height={104}
+            width={120}
+            height={120}
           />
         </div>
       </div>
@@ -149,6 +163,7 @@ export default function Home() {
                     position: "absolute",
                     left: 0,
                     right: 0,
+                    top: "-8px",
                     marginLeft: "auto",
                     marginRight: "auto",
                     width: tarotCard.labelSvg?.width,
@@ -181,7 +196,8 @@ export default function Home() {
         </div>
         <div style={{ position: "relative" }}>
           <Paper large>{generateExperiences(spotifyWorkExperiences)}</Paper>
-          <div
+          <Link
+            href="/spotify"
             style={{
               position: "absolute",
               bottom: "-32px",
@@ -193,8 +209,9 @@ export default function Home() {
               src={stickyNote}
               alt="Learn more about Spotify experiences"
             />
-          </div>
-          <div
+          </Link>
+          <Link
+            href="/spotify"
             style={{
               position: "absolute",
               bottom: "0px",
@@ -206,7 +223,7 @@ export default function Home() {
               src={clickForMore}
               alt="Learn more about Spotify experiences"
             />
-          </div>
+          </Link>
         </div>
 
         <div style={{ padding: "64px 0" }} />
@@ -217,7 +234,8 @@ export default function Home() {
         </div>
         <div style={{ position: "relative" }}>
           <Paper>{generateExperiences(jupiterWorkExperiences)}</Paper>
-          <div
+          <Link
+            href="/jupiter"
             style={{
               position: "absolute",
               bottom: "-64px",
@@ -229,8 +247,9 @@ export default function Home() {
               src={stickyNote}
               alt="Learn more about Jupiter experiences"
             />
-          </div>
-          <div
+          </Link>
+          <Link
+            href="/jupiter"
             style={{
               position: "absolute",
               bottom: "-24px",
@@ -242,7 +261,7 @@ export default function Home() {
               src={clickForMore}
               alt="Learn more about Jupiter experiences"
             />
-          </div>
+          </Link>
         </div>
 
         <div style={{ padding: "64px 0" }} />
@@ -254,17 +273,20 @@ export default function Home() {
         <div style={{ position: "relative" }}>
           <Paper>{generateExperiences(ncrWorkExperiences)}</Paper>
 
-          <div
+          <Link
+            href="/ncr"
             style={{
               position: "absolute",
               bottom: "-64px",
               left: 16,
+
               transform: "rotate(-10deg)",
             }}
           >
             <Image src={stickyNote} alt="Learn more about NCR experiences" />
-          </div>
-          <div
+          </Link>
+          <Link
+            href="/ncr"
             style={{
               position: "absolute",
               bottom: "-24px",
@@ -273,7 +295,7 @@ export default function Home() {
             }}
           >
             <Image src={clickForMore} alt="Learn more about NCR experiences" />
-          </div>
+          </Link>
         </div>
       </div>
     </Base>

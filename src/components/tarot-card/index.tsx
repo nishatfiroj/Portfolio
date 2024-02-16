@@ -10,7 +10,6 @@ export default function TarotCard({
   githubLinks,
   quote,
 }: TarotCardContent) {
-  console.log(githubLinks)
   return (
     <div style={{ position: "relative" }}>
       <div
@@ -47,6 +46,7 @@ export default function TarotCard({
             <a
               href={link}
               key={`github-link-${i}`}
+              target="_blank"
               style={{
                 color: "black",
                 textDecoration: "none",
