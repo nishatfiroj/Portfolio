@@ -194,7 +194,7 @@ export default function Home() {
           <Image src={spotifyCard} alt="Spotify card" />
         </div>
         <div style={{ position: "relative" }}>
-          <Paper large>{generateExperiences(spotifyWorkExperiences)}</Paper>
+          <Paper>{generateExperiences(spotifyWorkExperiences)}</Paper>
           <Link
             href="/spotify"
             style={{

@@ -90,7 +90,11 @@ export default function Jupiter() {
             position: "relative",
           }}
         >
-          <Image src={postIt} alt="Listening Parties introduction" />
+          <Image
+            src={postIt}
+            alt="Listening Parties introduction"
+            className="tape"
+          />
           <div
             style={{
               position: "absolute",
@@ -119,7 +123,7 @@ export default function Jupiter() {
         </div>
       </Paper>
 
-      <div style={{ textAlign: "center" }}>
+      <div style={{ textAlign: "center", marginTop: "64px" }}>
         <div style={{ display: "inline-block", margin: "4px auto" }}>
           <VinylContainer src={vinylStats1} alt="Over 90 LPs conducted" />
           <VinylContainer
@@ -168,14 +172,14 @@ export default function Jupiter() {
           </Caption>
         </div>
 
-        <div style={{ position: "relative" }}>
-          <Image src={stickyNote} alt="Tech stack for LPs" />
+        <div style={{ position: "relative", marginBottom: "32px" }}>
+          <Image src={stickyNote} alt="Tech stack for LPs" className="tape" />
           <div style={{ position: "absolute", top: 42, left: 128 }}>
             <Image src={techStackByMe} alt="Tech stack for LPs" />
           </div>
         </div>
 
-        <Paper large>
+        <Paper>
           Single page app, built with Next.js, utilizing React and Typescript
           technologies, that has a lifecycle of its own that cycles through an
           RSVP stage, artist testing stage, a Live phase, and an Ended phase.
@@ -204,10 +208,11 @@ export default function Jupiter() {
           </Caption>
         </div>
 
-        <div style={{ position: "relative" }}>
+        <div style={{ position: "relative", marginBottom: "32px" }}>
           <Image
             src={stickyNote}
             alt="My leadership role in implementing LPs"
+            className="tape"
           />
           <div style={{ position: "absolute", top: 48, left: 108 }}>
             <Image
@@ -217,7 +222,7 @@ export default function Jupiter() {
           </div>
         </div>
 
-        <Paper large>
+        <Paper>
           One of my key achievements was the planning, design, and
           implementation of a data orchestration layer, that enabled users to
           make purchases directly from their favorite artists. TL;DR, my plan
@@ -240,10 +245,11 @@ export default function Jupiter() {
           </Caption>
         </div>
 
-        <div style={{ position: "relative" }}>
+        <div style={{ position: "relative", paddingBottom: "24px" }}>
           <Image
             src={stickyNote}
             alt="My testing and documentation work for LPs"
+            className="tape"
           />
           <div style={{ position: "absolute", top: 48, left: 108 }}>
             <Image
@@ -280,7 +286,7 @@ export default function Jupiter() {
             position: "relative",
           }}
         >
-          <Image src={postIt} alt="Merch introduction" />
+          <Image src={postIt} alt="Merch introduction" className="tape" />
           <div
             style={{
               position: "absolute",
@@ -307,6 +313,7 @@ export default function Jupiter() {
         <Image
           src={shopWebDesktop}
           alt="Desktop view of Spotify's online merch store"
+          style={{ marginTop: "48px" }}
         />
         <Caption>
           This is what a Spotify user will see upon{" "}

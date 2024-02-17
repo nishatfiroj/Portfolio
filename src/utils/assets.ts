@@ -81,7 +81,7 @@ export const spotifyWorkExperiences: WorkExperience[] = [
   {
     title: "shop.spotify.com",
     description:
-      "i deployed regular maintenance of Spotify’s merchandise store, including maintenance of the Shopify integration, UTM attribution mapping, and user behavior instrumentation, with changes affecting millions of users and generating 40 million dollars during my tenure",
+      "I deployed regular maintenance of Spotify’s merchandise store, including maintenance of the Shopify integration, UTM attribution mapping, and user behavior instrumentation, with changes affecting millions of users and generating 40 million dollars during my tenure",
   },
 ]
 
