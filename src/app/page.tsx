@@ -38,7 +38,7 @@ import Link from "next/link"
 export default function Home() {
   const generateExperiences = (workExperiences: WorkExperience[]) =>
     workExperiences.map((experience: WorkExperience, i: number) => (
-      <div key={i} style={{ padding: "8px 0" }}>
+      <div key={i} style={{ padding: "4px 0" }}>
         <h4>{experience.title}</h4>
         <p>{experience.description}</p>
       </div>
@@ -232,7 +232,7 @@ export default function Home() {
           <Image src={jupiterCard} alt="Jupiter card" />
         </div>
         <div style={{ position: "relative" }}>
-          <Paper>{generateExperiences(jupiterWorkExperiences)}</Paper>
+          <Paper small>{generateExperiences(jupiterWorkExperiences)}</Paper>
           <Link
             href="/jupiter"
             style={{
@@ -270,7 +270,7 @@ export default function Home() {
           <Image src={ncrCard} alt="Ncr card" />
         </div>
         <div style={{ position: "relative" }}>
-          <Paper>{generateExperiences(ncrWorkExperiences)}</Paper>
+          <Paper small>{generateExperiences(ncrWorkExperiences)}</Paper>
 
           <Link
             href="/ncr"

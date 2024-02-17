@@ -112,7 +112,7 @@ export default function Jupiter() {
 
       {/* Listening parties content */}
 
-      <Paper>
+      <Paper small>
         <div>
           I co-created Listening Parties (LPs), with music playback, live
           interaction and chat, streaming to the main app, and an artist store,
@@ -259,7 +259,7 @@ export default function Jupiter() {
           </div>
         </div>
 
-        <Paper>
+        <Paper small>
           These frontend and backend systems were all built using a tech
           principles document that I co-wrote, to guide all engineers towards
           building a well organized, robust, future-proof system of
@@ -302,7 +302,7 @@ export default function Jupiter() {
       {/* Section 4: shop web content */}
 
       <div style={{ textAlign: "center", padding: "16px 0" }}>
-        <Paper>
+        <Paper small>
           I oversaw the deployment and ongoing upkeep of Spotify&apos;s retail
           store, bringing about improvements that benefited millions of users on
           a site that brought in $40 million in income. My work included
