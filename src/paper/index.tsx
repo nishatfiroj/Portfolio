@@ -14,10 +14,14 @@ export default function Paper({
           position: "absolute",
           left: 0,
           right: 0,
-          top: "80px",
           marginLeft: "auto",
           marginRight: "auto",
-          width: "280px",
+          padding: "0 16px",
+          textAlign: "center",
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
         }}
       >
         {children}

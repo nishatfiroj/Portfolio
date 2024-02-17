@@ -1,8 +1,7 @@
-export default function Spotify() {
+export default function Jupiter() {
   return (
     <>
-      <h1>Spotify</h1>
-      <p>spotify goods</p>
+      <h1>Pardon my dust y&apos;all</h1>
     </>
   )
 }

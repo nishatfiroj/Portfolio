@@ -1,8 +1,3 @@
 export default function NCR() {
-  return (
-    <>
-      <h1>NCR</h1>
-      <p>NCR goods</p>
-    </>
-  )
+  return <h1>Pardon my dust y&apos;all</h1>
 }

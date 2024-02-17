@@ -163,7 +163,6 @@ export default function Home() {
                     position: "absolute",
                     left: 0,
                     right: 0,
-                    top: "-8px",
                     marginLeft: "auto",
                     marginRight: "auto",
                     width: tarotCard.labelSvg?.width,

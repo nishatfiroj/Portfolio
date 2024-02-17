@@ -1,8 +1,10 @@
 import type { Metadata } from "next"
-import { Lora } from "next/font/google"
+import { Open_Sans } from "next/font/google"
 import "./globals.css"
 
-const lora = Lora({ subsets: ["latin"] })
+const openSans = Open_Sans({
+  subsets: ["latin"],
+})
 
 export const metadata: Metadata = {
   title: "Nishat's Portfolio",
@@ -16,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={lora.className}>{children}</body>
+      <body className={openSans.className}>{children}</body>
     </html>
   )
 }
