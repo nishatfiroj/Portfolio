@@ -8,3 +8,8 @@ export const Card = styled.div`
   display: flex;
   justify-content: center;
 `
+
+export const Caption = styled.p`
+  font-size: 12px;
+  margin: 12px 64px;
+`

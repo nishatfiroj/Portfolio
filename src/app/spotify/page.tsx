@@ -2,19 +2,23 @@
 
 // third party components
 import Image from "next/image"
+import Link from "next/link"
 
 // custom components
 import Tape from "@/components/tape"
 import Base from "@/components/base"
-import Paper from "@/paper"
-
-// styled components
-import { Caption, VinylContainer } from "./styled"
+import Paper from "@/components/paper"
+import Subtitle from "@/components/subtitle"
+import StickyNote from "@/components/sticky-note"
 
 // svgs
-import postIt from "../../../public/svg/postIt.svg"
+import goBack from "../../../public/svg/goBack.svg"
 import spotifyCard from "../../../public/svg/spotifyCard.svg"
-import stickyNote from "../../../public/svg/stickyNote.svg"
+import techStackByMe from "../../../public/svg/techStackByMe.svg"
+import leadershipByMe from "../../../public/svg/leadershipByMe.svg"
+import testingAndDocsByMe from "../../../public/svg/testingAndDocsByMe.svg"
+
+// spotify specific svgs
 import listeningPartiesByMe1 from "../../../public/svg/spotify-svg/1ListeningPartiesByMe.svg"
 import merchByMe2 from "../../../public/svg/spotify-svg/2MerchByMe.svg"
 import listeningPartiesByMe from "../../../public/svg/spotify-svg/listeningPartiesByMe.svg"
@@ -30,14 +34,20 @@ import shopWebiPhone from "../../../public/svg/spotify-svg/shopWebiPhone.svg"
 import listeningPartiesDesktop from "../../../public/svg/spotify-svg/listeningPartiesDesktop.svg"
 import shopWebDesktop from "../../../public/svg/spotify-svg/shopWebDesktop.svg"
 import listeningPartiesTablet from "../../../public/svg/spotify-svg/listeningPartiesTablet.svg"
-import techStackByMe from "../../../public/svg/spotify-svg/techStackByMe.svg"
-import leadershipByMe from "../../../public/svg/spotify-svg/leadershipByMe.svg"
-import testingAndDocsByMe from "../../../public/svg/spotify-svg/testingAndDocsByMe.svg"
-import Link from "next/link"
+import { Caption } from "../styled"
 
 export default function Jupiter() {
   return (
     <Base>
+      {/* Section 0: navigate back to home */}
+      <Link href="/">
+        <Image
+          src={goBack}
+          alt="Navigate back to home screen"
+          style={{ padding: "16px" }}
+        />
+      </Link>
+
       {/* Section 1: Spotify card w/ table of contents */}
       <div
         style={{
@@ -56,11 +66,11 @@ export default function Jupiter() {
           <div
             style={{
               position: "absolute",
-              bottom: "42px",
+              bottom: "36px",
               left: "12px",
               display: "flex",
               flexDirection: "column",
-              gap: "8px",
+              gap: "4px",
             }}
           >
             <Link href="#listening-parties">
@@ -77,38 +87,13 @@ export default function Jupiter() {
       </div>
 
       {/* Section 2: Listening parties title */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          margin: "200px auto 64px auto",
-        }}
+      <Subtitle
+        svg={listeningPartiesByMe}
+        alt="Listening Parties introduction"
         id="listening-parties"
-      >
-        <div
-          style={{
-            position: "relative",
-          }}
-        >
-          <Image
-            src={postIt}
-            alt="Listening Parties introduction"
-            className="tape"
-          />
-          <div
-            style={{
-              position: "absolute",
-              top: 32,
-              left: 12,
-            }}
-          >
-            <Image
-              src={listeningPartiesByMe}
-              alt="Listening Parties introduction"
-            />
-          </div>
-        </div>
-      </div>
+        top={32}
+        left={12}
+      />
 
       {/* Listening parties content */}
 
@@ -125,12 +110,18 @@ export default function Jupiter() {
 
       <div style={{ textAlign: "center", marginTop: "64px" }}>
         <div style={{ display: "inline-block", margin: "4px auto" }}>
-          <VinylContainer src={vinylStats1} alt="Over 90 LPs conducted" />
-          <VinylContainer
+          <Image
+            style={{ margin: "8px" }}
+            src={vinylStats1}
+            alt="Over 90 LPs conducted"
+          />
+          <Image
+            style={{ margin: "8px" }}
             src={vinylStats2}
             alt="Over 20,000 fans hosted on the application"
           />
-          <VinylContainer
+          <Image
+            style={{ margin: "8px" }}
             src={vinylStats3}
             alt="95% satisfaction rate amongst attendees"
           />
@@ -142,15 +133,18 @@ export default function Jupiter() {
           </p>
           <br />
 
-          <VinylContainer
+          <Image
+            style={{ margin: "8px" }}
             src={vinylStats4}
             alt="125% average causal lift in streaming in the week following the LP"
           />
-          <VinylContainer
+          <Image
+            style={{ margin: "8px" }}
             src={vinylStats5}
             alt="444% average lift in song saves among attendees on the day of the event"
           />
-          <VinylContainer
+          <Image
+            style={{ margin: "8px" }}
             src={vinylStats6}
             alt="44% average causal lift in users listening to the artist in the week following the event"
           />
@@ -172,12 +166,12 @@ export default function Jupiter() {
           </Caption>
         </div>
 
-        <div style={{ position: "relative", marginBottom: "32px" }}>
-          <Image src={stickyNote} alt="Tech stack for LPs" className="tape" />
-          <div style={{ position: "absolute", top: 42, left: 128 }}>
-            <Image src={techStackByMe} alt="Tech stack for LPs" />
-          </div>
-        </div>
+        <StickyNote
+          svg={techStackByMe}
+          alt="Tech stack for LPs"
+          top={42}
+          left={128}
+        />
 
         <Paper>
           Single page app, built with Next.js, utilizing React and Typescript
@@ -208,19 +202,12 @@ export default function Jupiter() {
           </Caption>
         </div>
 
-        <div style={{ position: "relative", marginBottom: "32px" }}>
-          <Image
-            src={stickyNote}
-            alt="My leadership role in implementing LPs"
-            className="tape"
-          />
-          <div style={{ position: "absolute", top: 48, left: 108 }}>
-            <Image
-              src={leadershipByMe}
-              alt="My leadership role in implementing LPs"
-            />
-          </div>
-        </div>
+        <StickyNote
+          svg={leadershipByMe}
+          alt="My leadership role in implementing LPs"
+          top={48}
+          left={108}
+        />
 
         <Paper>
           One of my key achievements was the planning, design, and
@@ -245,19 +232,12 @@ export default function Jupiter() {
           </Caption>
         </div>
 
-        <div style={{ position: "relative", paddingBottom: "24px" }}>
-          <Image
-            src={stickyNote}
-            alt="My testing and documentation work for LPs"
-            className="tape"
-          />
-          <div style={{ position: "absolute", top: 48, left: 108 }}>
-            <Image
-              src={testingAndDocsByMe}
-              alt="My testing and documentation work for LPs"
-            />
-          </div>
-        </div>
+        <StickyNote
+          svg={testingAndDocsByMe}
+          alt="My testing and documentation work for LPs"
+          top={48}
+          left={108}
+        />
 
         <Paper small>
           These frontend and backend systems were all built using a tech
@@ -273,31 +253,13 @@ export default function Jupiter() {
       </div>
 
       {/* Section 3: Shop web title */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          margin: "200px auto 64px auto",
-        }}
+      <Subtitle
+        svg={merchByMe}
+        alt="Merch introduction"
         id="shop-web"
-      >
-        <div
-          style={{
-            position: "relative",
-          }}
-        >
-          <Image src={postIt} alt="Merch introduction" className="tape" />
-          <div
-            style={{
-              position: "absolute",
-              top: 42,
-              left: 96,
-            }}
-          >
-            <Image src={merchByMe} alt="Merch introduction" />
-          </div>
-        </div>
-      </div>
+        top={42}
+        left={96}
+      />
 
       {/* Section 4: shop web content */}
 

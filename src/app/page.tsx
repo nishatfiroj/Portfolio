@@ -32,7 +32,7 @@ import {
   tarotCards,
 } from "../utils/assets"
 import { TarotCardContent, WorkExperience } from "@/utils/types"
-import Paper from "@/paper"
+import Paper from "@/components/paper"
 import Link from "next/link"
 
 export default function Home() {
@@ -207,6 +207,7 @@ export default function Home() {
             <Image
               src={stickyNote}
               alt="Learn more about Spotify experiences"
+              className="tape"
             />
           </Link>
           <Link
@@ -245,6 +246,7 @@ export default function Home() {
             <Image
               src={stickyNote}
               alt="Learn more about Jupiter experiences"
+              className="tape"
             />
           </Link>
           <Link
@@ -282,7 +284,11 @@ export default function Home() {
               transform: "rotate(-10deg)",
             }}
           >
-            <Image src={stickyNote} alt="Learn more about NCR experiences" />
+            <Image
+              src={stickyNote}
+              alt="Learn more about NCR experiences"
+              className="tape"
+            />
           </Link>
           <Link
             href="/ncr"
