@@ -21,10 +21,15 @@ import techStackByMe from "../../../public/svg/techStackByMe.svg"
 import leadershipByMe from "../../../public/svg/leadershipByMe.svg"
 
 // jupiter specific svgs
+import c1 from "../../../public/svg/jupiter-svg/c1.svg"
+import c2 from "../../../public/svg/jupiter-svg/c2.svg"
+import e from "../../../public/svg/jupiter-svg/e.svg"
+import i from "../../../public/svg/jupiter-svg/i.svg"
 import theMagazineByMe1 from "../../../public/svg/jupiter-svg/1TheMagazineByMe.svg"
 import theMagazineByMe from "../../../public/svg/jupiter-svg/theMagazineByMe.svg"
 import jupiteriPhone from "../../../public/svg/jupiter-svg/jupiteriPhone.svg"
 import jupiterDesktop from "../../../public/svg/jupiter-svg/jupiterDesktop.svg"
+import pressAttentionByMe from "../../../public/svg/jupiter-svg/pressAttentionByMe.svg"
 
 export default function Jupiter() {
   return (
@@ -102,9 +107,82 @@ export default function Jupiter() {
 
         <div style={{ padding: "156px 0 16px" }}>
           <StickyNote
+            svg={pressAttentionByMe}
+            alt="News publications that have recognized Jupiter Magazine"
+            top={42}
+            left={108}
+          />
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            width: "100%",
+            gap: "48px",
+            paddingBottom: "128px",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "flex-end",
+            }}
+          >
+            <Link href="https://www.chicagotribune.com/2024/02/15/jupiter-magazine-launch/">
+              <Image src={c1} alt="Link to Chicago Tribune article" />
+            </Link>
+            <p
+              style={{
+                fontSize: 12,
+                fontStyle: "italic",
+                paddingBottom: "32px",
+              }}
+            >
+              Chicago Tribune
+            </p>
+
+            <Link href="https://www.essence.com/fashion/jupiter-magazine-interview/">
+              <Image src={e} alt="Link to Essence article" />
+            </Link>
+            <p style={{ fontSize: 12, fontStyle: "italic" }}>Essence Tribune</p>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "flex-end",
+            }}
+          >
+            <Link href="https://www.culturetype.com/2024/01/26/latest-news-in-black-art-2024-united-states-artists-fellows-announced-james-claiborne-returns-to-barnes-foundation-jupiter-magazine-debuts-more/">
+              <Image src={c2} alt="Link to Culture Type article" />
+            </Link>
+
+            <p
+              style={{
+                fontSize: 12,
+                fontStyle: "italic",
+                paddingBottom: "32px",
+              }}
+            >
+              Culture Type
+            </p>
+
+            <Link href="https://www.interviewmagazine.com/film/trailer-face-off-maleficent-vs-jupiter-ascending">
+              <Image src={i} alt="Link to Interview Magazine article" />
+            </Link>
+            <p style={{ fontSize: 12, fontStyle: "italic" }}>
+              Interview Magazine
+            </p>
+          </div>
+        </div>
+
+        <div style={{ padding: "156px 0 16px" }}>
+          <StickyNote
             svg={techStackByMe}
             alt="Jupiter Magazine tech stack"
-            top={48}
+            top={42}
             left={128}
           />
         </div>
