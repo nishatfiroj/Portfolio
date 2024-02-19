@@ -36,7 +36,7 @@ import shopWebDesktop from "../../../public/svg/spotify-svg/shopWebDesktop.svg"
 import listeningPartiesTablet from "../../../public/svg/spotify-svg/listeningPartiesTablet.svg"
 import { Caption } from "../styled"
 
-export default function Jupiter() {
+export default function Spotify() {
   return (
     <Base>
       {/* Section 0: navigate back to home */}
@@ -98,14 +98,12 @@ export default function Jupiter() {
       {/* Listening parties content */}
 
       <Paper small>
-        <div>
-          I co-created Listening Parties (LPs), with music playback, live
-          interaction and chat, streaming to the main app, and an artist store,
-          to enable artists to communicate and earn revenue with thousands of
-          fans at once. I accomplished this in under 6 months to enable artists
-          to connect with their fans, earn thousands of dollars, and create new
-          streams of revenue for Spotify
-        </div>
+        I co-created Listening Parties (LPs), with music playback, live
+        interaction and chat, streaming to the main app, and an artist store, to
+        enable artists to communicate and earn revenue with thousands of fans at
+        once. I accomplished this in under 6 months to enable artists to connect
+        with their fans, earn thousands of dollars, and create new streams of
+        revenue for Spotify
       </Paper>
 
       <div style={{ textAlign: "center", marginTop: "64px" }}>
@@ -126,6 +124,7 @@ export default function Jupiter() {
             alt="95% satisfaction rate amongst attendees"
           />
           <br />
+
           <p style={{ padding: "0 12px", marginBottom: "64px" }}>
             Ran 90+ LPs, rewarding over 20,000 fans with an opportunity to
             interact with their favorite artists, with 95% satisfied, 60%
@@ -170,7 +169,7 @@ export default function Jupiter() {
           svg={techStackByMe}
           alt="Tech stack for LPs"
           top={42}
-          left={128}
+          left={56}
         />
 
         <Paper>
@@ -206,7 +205,7 @@ export default function Jupiter() {
           svg={leadershipByMe}
           alt="My leadership role in implementing LPs"
           top={48}
-          left={108}
+          left={52}
         />
 
         <Paper>
@@ -236,7 +235,7 @@ export default function Jupiter() {
           svg={testingAndDocsByMe}
           alt="My testing and documentation work for LPs"
           top={48}
-          left={108}
+          left={36}
         />
 
         <Paper small>

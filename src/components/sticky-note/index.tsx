@@ -19,18 +19,20 @@ export default function StickyNote({
   right,
 }: StickyNoteProps) {
   return (
-    <div style={{ position: "relative", marginBottom: "32px" }}>
-      <Image src={stickyNote} alt={alt} className="tape" />
-      <div
-        style={{
-          position: "absolute",
-          top,
-          bottom,
-          left,
-          right,
-        }}
-      >
-        <Image src={svg} alt={alt} />
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <div style={{ position: "relative", marginBottom: "32px" }}>
+        <Image src={stickyNote} alt={alt} className="tape" />
+        <div
+          style={{
+            position: "absolute",
+            top,
+            bottom,
+            left,
+            right,
+          }}
+        >
+          <Image src={svg} alt={alt} />
+        </div>
       </div>
     </div>
   )

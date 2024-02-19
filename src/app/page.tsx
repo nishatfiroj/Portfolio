@@ -9,7 +9,14 @@ import TarotCard from "@/components/tarot-card"
 import Tape from "@/components/tape"
 
 // styled-components
-import { Card } from "./styled"
+import {
+  Card,
+  ResponsiveHandwriting,
+  ResponsiveSectionOne,
+  ResponsiveSelfPortrait,
+  ResponsiveStamps,
+  ResponsiveTarotContainer,
+} from "./styled"
 
 // pngs & svgs
 import self from "../../public/self.png"
@@ -46,15 +53,7 @@ export default function Home() {
   return (
     <Base>
       {/* First section */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          minHeight: "600px",
-          margin: "16px",
-          gap: "16px",
-        }}
-      >
+      <ResponsiveSectionOne>
         <div
           style={{
             display: "flex",
@@ -67,30 +66,29 @@ export default function Home() {
             <Tape top="-16px" />
             <Card
               style={{
-                width: "160px",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
                 gap: "16px",
               }}
             >
-              <Image src={self} alt="Photo of Nishat (me)" width={130} />
-              <Image
+              <ResponsiveSelfPortrait src={self} alt="Photo of Nishat (me)" />
+              <ResponsiveHandwriting
                 src={nishatsPortfolio}
                 alt="Nishat's portfolio"
-                height={50}
               />
             </Card>
           </div>
           <div style={{ position: "relative" }}>
             <Tape top="-16px" right="0px" />
 
-            <Card
-              style={{
-                width: "160px",
-              }}
-            >
-              <Image src={nishatDescriptor} alt="" width={178} height={102} />
+            <Card style={{}}>
+              <ResponsiveHandwriting
+                src={nishatDescriptor}
+                alt=""
+                width={178}
+                height={102}
+              />
             </Card>
           </div>
         </div>
@@ -104,43 +102,15 @@ export default function Home() {
             justifyContent: "center",
           }}
         >
-          <Image
-            src={fullstackDevStamp}
-            alt="Fullstack developer"
-            width={120}
-            height={120}
-          />
-          <Image
-            src={webDevStamp}
-            alt="Web developer"
-            width={120}
-            height={120}
-          />
-          <Image
-            src={systemDesignerStamp}
-            alt="System designer"
-            width={120}
-            height={120}
-          />
+          <ResponsiveStamps src={fullstackDevStamp} alt="Fullstack developer" />
+          <ResponsiveStamps src={webDevStamp} alt="Web developer" />
+          <ResponsiveStamps src={systemDesignerStamp} alt="System designer" />
         </div>
-      </div>
+      </ResponsiveSectionOne>
 
       {/* Second section */}
       <div style={{ padding: "64px 0" }}>
-        <div>
-          <p style={{ opacity: "40%", textAlign: "center" }}>
-            ...swipe left for more
-          </p>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            overflow: "scroll",
-            gap: "48px",
-            padding: "0 48px",
-            scrollSnapType: "x mandatory",
-          }}
-        >
+        <ResponsiveTarotContainer>
           {tarotCards.map((tarotCard: TarotCardContent, i: number) => (
             <div
               key={i}
@@ -177,7 +147,7 @@ export default function Home() {
               </div>
             </div>
           ))}
-        </div>
+        </ResponsiveTarotContainer>
       </div>
 
       {/* Third section */}
@@ -214,8 +184,8 @@ export default function Home() {
             href="/spotify"
             style={{
               position: "absolute",
-              bottom: "0px",
-              left: 48,
+              bottom: 12,
+              left: 60,
               transform: "rotate(-5deg)",
             }}
           >
@@ -254,7 +224,7 @@ export default function Home() {
             style={{
               position: "absolute",
               bottom: "-24px",
-              right: 24,
+              right: 42,
               transform: "rotate(10deg)",
             }}
           >
@@ -295,7 +265,7 @@ export default function Home() {
             style={{
               position: "absolute",
               bottom: "-24px",
-              left: 32,
+              left: 64,
               transform: "rotate(-10deg)",
             }}
           >

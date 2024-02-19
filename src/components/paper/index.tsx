@@ -1,4 +1,5 @@
 import { ReactNode } from "react"
+import { ResponsivePaperContainer, ResponsivePaperContent } from "./styled"
 
 export default function Paper({
   children,
@@ -8,29 +9,25 @@ export default function Paper({
   small?: boolean
 }) {
   return (
-    <div style={{ position: "relative" }}>
-      <div
-        style={{
-          position: "absolute",
-          left: 0,
-          right: 0,
-          marginLeft: "auto",
-          marginRight: "auto",
-          padding: "0 16px",
-          textAlign: "center",
-          height: "100%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-        }}
-      >
-        {children}
-      </div>
-      <div
-        style={{ display: "flex", justifyContent: "center", minWidth: "375px" }}
-      >
-        <PaperSvg small={small || false} />
-      </div>
+    <div
+      style={{
+        display: "flex",
+        position: "relative",
+        justifyContent: "center",
+      }}
+    >
+      <ResponsivePaperContainer style={{ position: "relative" }}>
+        <ResponsivePaperContent>{children}</ResponsivePaperContent>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            minWidth: "375px",
+          }}
+        >
+          <PaperSvg small={small || false} />
+        </div>
+      </ResponsivePaperContainer>
     </div>
   )
 }

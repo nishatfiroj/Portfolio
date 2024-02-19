@@ -229,7 +229,13 @@ export default function Jupiter() {
           where, and how future developers can begin to contribute.
         </Paper>
 
-        <div style={{ marginTop: "64px" }}>
+        <div
+          style={{
+            marginTop: "64px",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
           <Image
             src={jupiterDesktop}
             alt="Desktop view of Jupiter article page"
