@@ -14,6 +14,83 @@ import reactByMe from "../../public/svg/reactByMe.svg"
 import nodeJsByMe from "../../public/svg/nodeJsByMe.svg"
 import typescriptByMe from "../../public/svg/typescriptByMe.svg"
 
+// tape svgs
+import tape1 from "../../public/svg/tape/1tape.svg"
+import tape1Large from "../../public/svg/tape/large/1tape.svg"
+import tape2 from "../../public/svg/tape/2tape.svg"
+import tape2Large from "../../public/svg/tape/large/2tape.svg"
+import tape3 from "../../public/svg/tape/3tape.svg"
+import tape3Large from "../../public/svg/tape/large/3tape.svg"
+import tape4 from "../../public/svg/tape/4tape.svg"
+import tape4Large from "../../public/svg/tape/large/4tape.svg"
+import tape5 from "../../public/svg/tape/5tape.svg"
+import tape5Large from "../../public/svg/tape/large/5tape.svg"
+import tape6 from "../../public/svg/tape/6tape.svg"
+import tape6Large from "../../public/svg/tape/large/6tape.svg"
+import tape7 from "../../public/svg/tape/7tape.svg"
+import tape7Large from "../../public/svg/tape/large/7tape.svg"
+import tape8 from "../../public/svg/tape/8tape.svg"
+import tape8Large from "../../public/svg/tape/large/8tape.svg"
+import tape9 from "../../public/svg/tape/9tape.svg"
+import tape9Large from "../../public/svg/tape/large/9tape.svg"
+import tape10 from "../../public/svg/tape/10tape.svg"
+import tape10Large from "../../public/svg/tape/large/10tape.svg"
+import tape11 from "../../public/svg/tape/11tape.svg"
+import tape11Large from "../../public/svg/tape/large/11tape.svg"
+import tape12 from "../../public/svg/tape/12tape.svg"
+import tape12Large from "../../public/svg/tape/large/12tape.svg"
+import tape13 from "../../public/svg/tape/13tape.svg"
+import tape13Large from "../../public/svg/tape/large/13tape.svg"
+import tape14 from "../../public/svg/tape/14tape.svg"
+import tape14Large from "../../public/svg/tape/large/14tape.svg"
+import tape15 from "../../public/svg/tape/15tape.svg"
+import tape15Large from "../../public/svg/tape/large/15tape.svg"
+import tape16 from "../../public/svg/tape/16tape.svg"
+import tape16Large from "../../public/svg/tape/large/16tape.svg"
+import { StaticImageData } from "next/image"
+
+export const TapeDictionary: {
+  large: StaticImageData[]
+  small: StaticImageData[]
+} = {
+  large: [
+    tape1Large,
+    tape2Large,
+    tape3Large,
+    tape4Large,
+    tape5Large,
+    tape6Large,
+    tape7Large,
+    tape8Large,
+    tape9Large,
+    tape10Large,
+    tape11Large,
+    tape12Large,
+    tape13Large,
+    tape14Large,
+    tape15Large,
+    tape16Large,
+  ],
+  small: [
+    tape1,
+    tape2,
+    tape3,
+    tape4,
+    tape5,
+    tape6,
+    tape7,
+    tape8,
+    tape9,
+    tape10,
+    tape11,
+    tape12,
+    tape13,
+    tape14,
+    tape15,
+    tape16,
+  ],
+}
+
 export const tarotCards: TarotCardContent[] = [
   {
     svg: nextJs,

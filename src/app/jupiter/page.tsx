@@ -109,8 +109,8 @@ export default function Jupiter() {
           <StickyNote
             svg={pressAttentionByMe}
             alt="News publications that have recognized Jupiter Magazine"
-            top={42}
-            left={108}
+            top={24}
+            left={36}
           />
         </div>
 
@@ -182,8 +182,8 @@ export default function Jupiter() {
           <StickyNote
             svg={techStackByMe}
             alt="Jupiter Magazine tech stack"
-            top={42}
-            left={128}
+            top={24}
+            left={42}
           />
         </div>
 
@@ -213,8 +213,8 @@ export default function Jupiter() {
           <StickyNote
             svg={leadershipByMe}
             alt="Jupiter Magazine tech stack"
-            top={48}
-            left={128}
+            top={24}
+            left={36}
           />
         </div>
 
@@ -234,6 +234,8 @@ export default function Jupiter() {
             marginTop: "64px",
             display: "flex",
             justifyContent: "center",
+            flexDirection: "column",
+            alignItems: "center",
           }}
         >
           <Image

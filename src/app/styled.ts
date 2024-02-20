@@ -49,6 +49,7 @@ export const ResponsiveSectionOne = styled.div`
 export const ResponsiveSelfPortrait = styled(Image)`
   width: 130px;
   height: 100%;
+
   /* smaller desktops */
   @media only screen and (min-width: 1200px) {
     width: 200px;

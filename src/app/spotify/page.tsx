@@ -168,8 +168,8 @@ export default function Spotify() {
         <StickyNote
           svg={techStackByMe}
           alt="Tech stack for LPs"
-          top={42}
-          left={56}
+          top={20}
+          left={44}
         />
 
         <Paper>
@@ -204,8 +204,8 @@ export default function Spotify() {
         <StickyNote
           svg={leadershipByMe}
           alt="My leadership role in implementing LPs"
-          top={48}
-          left={52}
+          top={24}
+          left={32}
         />
 
         <Paper>
@@ -234,8 +234,8 @@ export default function Spotify() {
         <StickyNote
           svg={testingAndDocsByMe}
           alt="My testing and documentation work for LPs"
-          top={48}
-          left={36}
+          top={24}
+          left={24}
         />
 
         <Paper small>

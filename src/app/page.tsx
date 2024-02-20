@@ -82,7 +82,7 @@ export default function Home() {
           <div style={{ position: "relative" }}>
             <Tape top="-16px" right="0px" />
 
-            <Card style={{}}>
+            <Card>
               <ResponsiveHandwriting
                 src={nishatDescriptor}
                 alt=""
@@ -180,20 +180,24 @@ export default function Home() {
               className="tape"
             />
           </Link>
-          <Link
-            href="/spotify"
-            style={{
-              position: "absolute",
-              bottom: 12,
-              left: 60,
-              transform: "rotate(-5deg)",
-            }}
-          >
-            <Image
-              src={clickForMore}
-              alt="Learn more about Spotify experiences"
-            />
-          </Link>
+          <div style={{ position: "relative" }}>
+            <Link
+              href="/spotify"
+              style={{
+                position: "absolute",
+                bottom: 12,
+                left: 50,
+                transform: "rotate(-5deg)",
+              }}
+            >
+              <Tape top="-44px" />
+
+              <Image
+                src={clickForMore}
+                alt="Learn more about Spotify experiences"
+              />
+            </Link>
+          </div>
         </div>
 
         <div style={{ padding: "64px 0" }} />
@@ -213,26 +217,29 @@ export default function Home() {
               transform: "rotate(10deg)",
             }}
           >
+            <Tape top="-12px" left="24px" />
             <Image
               src={stickyNote}
               alt="Learn more about Jupiter experiences"
               className="tape"
             />
           </Link>
-          <Link
-            href="/jupiter"
-            style={{
-              position: "absolute",
-              bottom: "-24px",
-              right: 42,
-              transform: "rotate(10deg)",
-            }}
-          >
-            <Image
-              src={clickForMore}
-              alt="Learn more about Jupiter experiences"
-            />
-          </Link>
+          <div style={{ position: "relative" }}>
+            <Link
+              href="/jupiter"
+              style={{
+                position: "absolute",
+                bottom: "-24px",
+                right: 28,
+                transform: "rotate(10deg)",
+              }}
+            >
+              <Image
+                src={clickForMore}
+                alt="Learn more about Jupiter experiences"
+              />
+            </Link>
+          </div>
         </div>
 
         <div style={{ padding: "64px 0" }} />
@@ -260,17 +267,24 @@ export default function Home() {
               className="tape"
             />
           </Link>
-          <Link
-            href="/ncr"
-            style={{
-              position: "absolute",
-              bottom: "-24px",
-              left: 64,
-              transform: "rotate(-10deg)",
-            }}
-          >
-            <Image src={clickForMore} alt="Learn more about NCR experiences" />
-          </Link>
+          <div style={{ position: "relative" }}>
+            <Link
+              href="/ncr"
+              style={{
+                position: "absolute",
+                bottom: "-24px",
+                left: 48,
+                transform: "rotate(-10deg)",
+              }}
+            >
+              <Tape top="-52px" />
+
+              <Image
+                src={clickForMore}
+                alt="Learn more about NCR experiences"
+              />
+            </Link>
+          </div>
         </div>
       </div>
     </Base>
