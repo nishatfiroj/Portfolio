@@ -12,7 +12,7 @@ import Subtitle from "@/components/subtitle"
 import Paper from "@/components/paper"
 
 // styled components
-import { Caption } from "../styled"
+import { Break, Caption } from "../styled"
 
 // svgs
 import goBack from "../../../public/svg/goBack.svg"
@@ -252,14 +252,5 @@ export default function Jupiter() {
         </div>
       </div>
     </Base>
-  )
-}
-
-function Break() {
-  return (
-    <>
-      <br />
-      <br />
-    </>
   )
 }

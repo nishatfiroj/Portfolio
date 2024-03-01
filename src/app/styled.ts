@@ -104,3 +104,7 @@ export const ResponsiveTarotContainer = styled.div`
     font-weight: 500;
   }
 `
+
+export const Break = styled.div`
+  padding: 16px 0;
+`

@@ -34,7 +34,7 @@ import shopWebiPhone from "../../../public/svg/spotify-svg/shopWebiPhone.svg"
 import listeningPartiesDesktop from "../../../public/svg/spotify-svg/listeningPartiesDesktop.svg"
 import shopWebDesktop from "../../../public/svg/spotify-svg/shopWebDesktop.svg"
 import listeningPartiesTablet from "../../../public/svg/spotify-svg/listeningPartiesTablet.svg"
-import { Caption } from "../styled"
+import { Break, Caption } from "../styled"
 
 export default function Spotify() {
   return (
@@ -297,14 +297,5 @@ export default function Spotify() {
         </Caption>
       </div>
     </Base>
-  )
-}
-
-function Break() {
-  return (
-    <>
-      <br />
-      <br />
-    </>
   )
 }
