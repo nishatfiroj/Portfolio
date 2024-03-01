@@ -1,11 +1,19 @@
 "use client"
 
+// third party compoentns
 import Link from "next/link"
 import Image from "next/image"
+
+// styled componenets
+import { Break } from "../styled"
+
+// custom components
 import Tape from "@/components/tape"
+import Paper from "@/components/paper"
+import Subtitle from "@/components/subtitle"
+import { GoBackButton } from "@/components/go-back"
 
 // svgs
-import goBack from "../../../public/svg/goBack.svg"
 import ncrCard from "../../../public/svg/ncrCard.svg"
 import designSystemsByMe from "../../../public/svg/ncr-svg/designSystemsByMe.svg"
 import crossFunctionalByMe from "../../../public/svg/ncr-svg/crossFunctionalByMe.svg"
@@ -15,21 +23,12 @@ import uno1 from "../../../public/svg/ncr-svg/uno1.svg"
 import uno2 from "../../../public/svg/ncr-svg/uno2.svg"
 import uno3 from "../../../public/svg/ncr-svg/uno3.svg"
 import wildCard from "../../../public/svg/ncr-svg/wildCard.svg"
-import Paper from "@/components/paper"
-import { Break } from "../styled"
-import Subtitle from "@/components/subtitle"
 
 export default function NCR() {
   return (
     <>
       {/* Section 0: navigate back to home */}
-      <Link href="/">
-        <Image
-          src={goBack}
-          alt="Navigate back to home screen"
-          style={{ padding: "16px" }}
-        />
-      </Link>
+      <GoBackButton />
 
       {/* Section 1: NCR card w/ table of contents */}
       <div

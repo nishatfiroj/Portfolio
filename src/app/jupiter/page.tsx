@@ -15,7 +15,6 @@ import Paper from "@/components/paper"
 import { Break, Caption } from "../styled"
 
 // svgs
-import goBack from "../../../public/svg/goBack.svg"
 import jupiterCard from "../../../public/svg/jupiterCard.svg"
 import techStackByMe from "../../../public/svg/techStackByMe.svg"
 import leadershipByMe from "../../../public/svg/leadershipByMe.svg"
@@ -30,18 +29,13 @@ import theMagazineByMe from "../../../public/svg/jupiter-svg/theMagazineByMe.svg
 import jupiteriPhone from "../../../public/svg/jupiter-svg/jupiteriPhone.svg"
 import jupiterDesktop from "../../../public/svg/jupiter-svg/jupiterDesktop.svg"
 import pressAttentionByMe from "../../../public/svg/jupiter-svg/pressAttentionByMe.svg"
+import { GoBackButton } from "@/components/go-back"
 
 export default function Jupiter() {
   return (
     <Base>
       {/* Section 0: navigate back to home */}
-      <Link href="/">
-        <Image
-          src={goBack}
-          alt="Navigate back to home screen"
-          style={{ padding: "16px" }}
-        />
-      </Link>
+      <GoBackButton />
 
       {/* Section 1: Jupiter card w/ table of contents */}
       <div

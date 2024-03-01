@@ -10,15 +10,16 @@ import Base from "@/components/base"
 import Paper from "@/components/paper"
 import Subtitle from "@/components/subtitle"
 import StickyNote from "@/components/sticky-note"
+import { GoBackButton } from "@/components/go-back"
+
+// styled components
+import { Break, Caption } from "../styled"
 
 // svgs
-import goBack from "../../../public/svg/goBack.svg"
 import spotifyCard from "../../../public/svg/spotifyCard.svg"
 import techStackByMe from "../../../public/svg/techStackByMe.svg"
 import leadershipByMe from "../../../public/svg/leadershipByMe.svg"
 import testingAndDocsByMe from "../../../public/svg/testingAndDocsByMe.svg"
-
-// spotify specific svgs
 import listeningPartiesByMe1 from "../../../public/svg/spotify-svg/1ListeningPartiesByMe.svg"
 import merchByMe2 from "../../../public/svg/spotify-svg/2MerchByMe.svg"
 import listeningPartiesByMe from "../../../public/svg/spotify-svg/listeningPartiesByMe.svg"
@@ -34,19 +35,12 @@ import shopWebiPhone from "../../../public/svg/spotify-svg/shopWebiPhone.svg"
 import listeningPartiesDesktop from "../../../public/svg/spotify-svg/listeningPartiesDesktop.svg"
 import shopWebDesktop from "../../../public/svg/spotify-svg/shopWebDesktop.svg"
 import listeningPartiesTablet from "../../../public/svg/spotify-svg/listeningPartiesTablet.svg"
-import { Break, Caption } from "../styled"
 
 export default function Spotify() {
   return (
     <Base>
       {/* Section 0: navigate back to home */}
-      <Link href="/">
-        <Image
-          src={goBack}
-          alt="Navigate back to home screen"
-          style={{ padding: "16px" }}
-        />
-      </Link>
+      <GoBackButton />
 
       {/* Section 1: Spotify card w/ table of contents */}
       <div

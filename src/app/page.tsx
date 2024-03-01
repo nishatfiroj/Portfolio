@@ -26,6 +26,7 @@ import jupiterCard from "../../public/svg/jupiterCard.svg"
 import ncrCard from "../../public/svg/ncrCard.svg"
 import clickForMore from "../../public/svg/clickForMore.svg"
 import stickyNote from "../../public/svg/stickyNote.svg"
+import resumeByMe from "../../public/svg/resumeByMe.svg"
 
 // assets
 import {
@@ -87,6 +88,13 @@ export default function Home() {
               />
             </Card>
           </div>
+          <Link href="/resume" style={{ position: "relative" }}>
+            <Tape top="-16px" right="30px" />
+
+            <Card>
+              <ResponsiveHandwriting src={resumeByMe} alt="" width={178} />
+            </Card>
+          </Link>
         </div>
       </ResponsiveSectionOne>
 
