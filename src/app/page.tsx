@@ -14,7 +14,6 @@ import {
   ResponsiveHandwriting,
   ResponsiveSectionOne,
   ResponsiveSelfPortrait,
-  ResponsiveStamps,
   ResponsiveTarotContainer,
 } from "./styled"
 
@@ -22,9 +21,6 @@ import {
 import self from "../../public/self.png"
 import nishatsPortfolio from "../../public/svg/nishatsPortfolio.svg"
 import nishatDescriptor from "../../public/svg/nishatDescriptor.svg"
-import fullstackDevStamp from "../../public/svg/fullstackDevStamp.svg"
-import webDevStamp from "../../public/svg/webDevStamp.svg"
-import systemDesignerStamp from "../../public/svg/systemDesignerStamp.svg"
 import spotifyCard from "../../public/svg/spotifyCard.svg"
 import jupiterCard from "../../public/svg/jupiterCard.svg"
 import ncrCard from "../../public/svg/ncrCard.svg"
@@ -91,20 +87,6 @@ export default function Home() {
               />
             </Card>
           </div>
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "12px",
-            maxWidth: "104px",
-            justifyContent: "center",
-          }}
-        >
-          <ResponsiveStamps src={fullstackDevStamp} alt="Fullstack developer" />
-          <ResponsiveStamps src={webDevStamp} alt="Web developer" />
-          <ResponsiveStamps src={systemDesignerStamp} alt="System designer" />
         </div>
       </ResponsiveSectionOne>
 
