@@ -150,133 +150,57 @@ export default function Home() {
           padding: "64px 0",
         }}
       >
-        <div style={{ position: "relative" }}>
+        <Link href="/spotify" style={{ position: "relative" }}>
           <Tape top="-12px" right="12px" />
           <Image src={spotifyCard} alt="Spotify card" />
-        </div>
-        <div style={{ position: "relative" }}>
-          <Paper>{generateExperiences(spotifyWorkExperiences)}</Paper>
-          <Link
-            href="/spotify"
+          <Image
+            src={clickForMore}
+            alt="Click to read more"
             style={{
               position: "absolute",
-              bottom: "-32px",
-              left: 24,
-              transform: "rotate(-5deg)",
+              bottom: 64,
+              left: 28,
+              transform: "rotate(-15deg);",
             }}
-          >
-            <Image
-              src={stickyNote}
-              alt="Learn more about Spotify experiences"
-              className="tape"
-            />
-          </Link>
-          <div style={{ position: "relative" }}>
-            <Link
-              href="/spotify"
-              style={{
-                position: "absolute",
-                bottom: 12,
-                left: 50,
-                transform: "rotate(-5deg)",
-              }}
-            >
-              <Tape top="-44px" />
-
-              <Image
-                src={clickForMore}
-                alt="Learn more about Spotify experiences"
-              />
-            </Link>
-          </div>
-        </div>
+          />
+        </Link>
+        <Paper>{generateExperiences(spotifyWorkExperiences)}</Paper>
 
         <div style={{ padding: "64px 0" }} />
 
-        <div style={{ position: "relative" }}>
+        <Link href="/jupiter" style={{ position: "relative" }}>
           <Tape top="-12px" left="24px" />
           <Image src={jupiterCard} alt="Jupiter card" />
-        </div>
-        <div style={{ position: "relative" }}>
-          <Paper small>{generateExperiences(jupiterWorkExperiences)}</Paper>
-          <Link
-            href="/jupiter"
+          <Image
+            src={clickForMore}
+            alt="Click to read more"
             style={{
               position: "absolute",
-              bottom: "-64px",
-              right: 12,
-              transform: "rotate(10deg)",
+              bottom: 64,
+              left: 16,
+              transform: "rotate(10deg);",
             }}
-          >
-            <Tape top="-12px" left="24px" />
-            <Image
-              src={stickyNote}
-              alt="Learn more about Jupiter experiences"
-              className="tape"
-            />
-          </Link>
-          <div style={{ position: "relative" }}>
-            <Link
-              href="/jupiter"
-              style={{
-                position: "absolute",
-                bottom: "-24px",
-                right: 28,
-                transform: "rotate(10deg)",
-              }}
-            >
-              <Image
-                src={clickForMore}
-                alt="Learn more about Jupiter experiences"
-              />
-            </Link>
-          </div>
-        </div>
+          />
+        </Link>
+        <Paper small>{generateExperiences(jupiterWorkExperiences)}</Paper>
 
         <div style={{ padding: "64px 0" }} />
 
-        <div style={{ position: "relative" }}>
+        <Link href="/ncr" style={{ position: "relative" }}>
           <Tape top="-12px" left="32px" />
           <Image src={ncrCard} alt="Ncr card" />
-        </div>
-        <div style={{ position: "relative" }}>
-          <Paper small>{generateExperiences(ncrWorkExperiences)}</Paper>
-
-          <Link
-            href="/ncr"
+          <Image
+            src={clickForMore}
+            alt="Click to read more"
             style={{
               position: "absolute",
-              bottom: "-64px",
-              left: 16,
-
-              transform: "rotate(-10deg)",
+              bottom: 64,
+              left: 20,
+              transform: "rotate(-5deg);",
             }}
-          >
-            <Image
-              src={stickyNote}
-              alt="Learn more about NCR experiences"
-              className="tape"
-            />
-          </Link>
-          <div style={{ position: "relative" }}>
-            <Link
-              href="/ncr"
-              style={{
-                position: "absolute",
-                bottom: "-24px",
-                left: 48,
-                transform: "rotate(-10deg)",
-              }}
-            >
-              <Tape top="-52px" />
-
-              <Image
-                src={clickForMore}
-                alt="Learn more about NCR experiences"
-              />
-            </Link>
-          </div>
-        </div>
+          />
+        </Link>
+        <Paper small>{generateExperiences(ncrWorkExperiences)}</Paper>
       </div>
     </Base>
   )
