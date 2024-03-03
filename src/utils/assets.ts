@@ -1,4 +1,6 @@
-import { TarotCardContent, WorkExperience } from "@/utils/types"
+import { StaticImageData } from "next/image"
+
+import { ImageCard, TarotCardContent, WorkExperience } from "@/utils/types"
 
 // svg logos
 import react from "../../public/svg/react.svg"
@@ -47,7 +49,17 @@ import tape15 from "../../public/svg/tape/15tape.svg"
 import tape15Large from "../../public/svg/tape/large/15tape.svg"
 import tape16 from "../../public/svg/tape/16tape.svg"
 import tape16Large from "../../public/svg/tape/large/16tape.svg"
-import { StaticImageData } from "next/image"
+
+// desktop svgs for spotify
+import liveRoomDesktop from "../../public/png/live_desktop.png"
+import endedRoomDesktop from "../../public/png/ended_desktop.png"
+import rsvpRoomDesktop from "../../public/png/rsvp_desktop.png"
+import hypeRoomDesktop from "../../public/png/hype_desktop.png"
+import testRoomMobile from "../../public/png/test_mobile.png"
+import liveRoomMobile from "../../public/png/live_mobile.png"
+import endedRoomMobile from "../../public/png/ended_mobile.png"
+import rsvpRoomMobile from "../../public/png/rsvp_mobile.png"
+import hypeRoomMobile from "../../public/png/hype_mobile.png"
 
 export const TapeDictionary: {
   large: StaticImageData[]
@@ -180,5 +192,65 @@ export const ncrWorkExperiences: WorkExperience[] = [
     title: "Figma Plugins",
     description:
       "I assisted designers and developers with white labeling components by creating plugins that sped up the design process for the entire UI/UX department.",
+  },
+]
+
+export const spotifyDesktopImages: ImageCard[] = [
+  {
+    img: rsvpRoomDesktop,
+    subtitle: "The RSVP Room",
+    caption:
+      "The first phase of an LP, where attendees can see the LP offering and choose to RSVP to the event.",
+  },
+  {
+    img: hypeRoomDesktop,
+    subtitle: "The Hype Room",
+    caption:
+      "The second phase of an LP, from the perspective of a Listener, where attendees can see the countdown till the LP starts. They can purchase from the artist store and follow the artist when in this phase of an LP.",
+  },
+  {
+    img: liveRoomDesktop,
+    subtitle: "The Live Room",
+    caption:
+      "The third phase of an LP, where attendees can participate in a live chat, shop in the artist store, and listen to artists and request to speak with them. In this phase the attendee also gets to listen to music that the artist's team queues up.",
+  },
+  {
+    img: endedRoomDesktop,
+    subtitle: "The Ended Room",
+    caption:
+      "The fourth phase of an LP, where attendees see a thank you note, buy from the artist shop, and follow the artist.",
+  },
+]
+
+export const spotifyMobileImages: ImageCard[] = [
+  {
+    img: rsvpRoomMobile,
+    subtitle: "The RSVP Room",
+    caption:
+      "The first phase of an LP, where attendees can see the LP offering and choose to RSVP to the event.",
+  },
+  {
+    img: testRoomMobile,
+    subtitle: "The Test Room",
+    caption:
+      "The second phase of an LP, from the perspective of an artist, where an artist and their team can test out their audio and music playback capabilities, before going live in an LP.",
+  },
+  {
+    img: hypeRoomMobile,
+    subtitle: "The Hype Room",
+    caption:
+      "The second phase of an LP, from the perspective of a listener, where attendees can see the countdown till the LP starts. They can purchase from the artist store and follow the artist when in this phase of an LP.",
+  },
+  {
+    img: liveRoomMobile,
+    subtitle: "The Live Room",
+    caption:
+      "The third phase of an LP, where attendees can participate in a live chat, shop in the artist store, and listen to artists and request to speak with them. In this phase the attendee also gets to listen to music that the artist's team queues up.",
+  },
+  {
+    img: endedRoomMobile,
+    subtitle: "The Ended Room",
+    caption:
+      "The fourth phase of an LP, where attendees see a thank you note, buy from the artist shop, and follow the artist.",
   },
 ]

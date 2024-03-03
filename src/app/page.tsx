@@ -18,7 +18,7 @@ import {
 } from "./styled"
 
 // pngs & svgs
-import self from "../../public/self.png"
+import self from "../../public/png/self.png"
 import nishatsPortfolio from "../../public/svg/nishatsPortfolio.svg"
 import nishatDescriptor from "../../public/svg/nishatDescriptor.svg"
 import spotifyCard from "../../public/svg/spotifyCard.svg"
@@ -99,7 +99,8 @@ export default function Home() {
       </ResponsiveSectionOne>
 
       {/* Second section */}
-      <div style={{ padding: "64px 0" }}>
+      <div style={{ padding: "64px 0", textAlign: "center" }}>
+        <h1 className="scroll-text-animation">Swipe left for more</h1>
         <ResponsiveTarotContainer>
           {tarotCards.map((tarotCard: TarotCardContent, i: number) => (
             <div

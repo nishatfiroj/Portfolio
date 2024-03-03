@@ -13,3 +13,9 @@ export type WorkExperience = {
   title: string
   description: string
 }
+
+export type ImageCard = {
+  img: StaticImageData
+  subtitle: string
+  caption: string
+}

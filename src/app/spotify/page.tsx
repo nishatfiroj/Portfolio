@@ -13,7 +13,8 @@ import StickyNote from "@/components/sticky-note"
 import { GoBackButton } from "@/components/go-back"
 
 // styled components
-import { Break, Caption } from "../styled"
+import { Break, Caption, Card } from "../styled"
+import { ResponsiveImageCardContainer } from "./styled"
 
 // svgs
 import spotifyCard from "../../../public/svg/spotifyCard.svg"
@@ -30,11 +31,13 @@ import vinylStats3 from "../../../public/svg/spotify-svg/vinylStats3.svg"
 import vinylStats4 from "../../../public/svg/spotify-svg/vinylStats4.svg"
 import vinylStats5 from "../../../public/svg/spotify-svg/vinylStats5.svg"
 import vinylStats6 from "../../../public/svg/spotify-svg/vinylStats6.svg"
-import listeningPartiesiPhone from "../../../public/svg/spotify-svg/listeningPartiesiPhone.svg"
-import shopWebiPhone from "../../../public/svg/spotify-svg/shopWebiPhone.svg"
-import listeningPartiesDesktop from "../../../public/svg/spotify-svg/listeningPartiesDesktop.svg"
-import shopWebDesktop from "../../../public/svg/spotify-svg/shopWebDesktop.svg"
-import listeningPartiesTablet from "../../../public/svg/spotify-svg/listeningPartiesTablet.svg"
+
+// pngs
+import shopWebiPhone from "../../../public/png/shop_web_mobile.png"
+import shopWebDesktop from "../../../public/png/shop_web_desktop.png"
+
+import { spotifyDesktopImages, spotifyMobileImages } from "@/utils/assets"
+import { ImageCard } from "@/utils/types"
 
 export default function Spotify() {
   return (
@@ -150,14 +153,28 @@ export default function Spotify() {
           </p>
         </div>
 
-        <div style={{ padding: "96px 0", textAlign: "center" }}>
-          <Image src={listeningPartiesiPhone} alt="iPhone layout of LP event" />
-          <Caption>
-            This is the view an artist sees when they are testing out their
-            audio and music playback capabilities on their mobile, before going
-            live in an LP.
-          </Caption>
-        </div>
+        <h1 className="scroll-text-animation">Swipe left for more</h1>
+        <ResponsiveImageCardContainer>
+          {spotifyMobileImages.map((mobileImage: ImageCard, i: number) => (
+            <div key={i} style={{ margin: "0px 32px" }}>
+              <Card style={{ margin: "20px" }}>
+                <Image
+                  src={mobileImage.img}
+                  alt={mobileImage.subtitle}
+                  width={250}
+                />
+              </Card>
+              <Caption>
+                <b>{mobileImage.subtitle}: </b>
+                {mobileImage.caption}
+              </Caption>
+            </div>
+          ))}
+        </ResponsiveImageCardContainer>
+
+        <Break />
+        <Break />
+        <Break />
 
         <StickyNote
           svg={techStackByMe}
@@ -167,33 +184,43 @@ export default function Spotify() {
         />
 
         <Paper>
-          Single page app, built with Next.js, utilizing React and Typescript
-          technologies, that has a lifecycle of its own that cycles through an
-          RSVP stage, artist testing stage, a Live phase, and an Ended phase.
+          An LP is a single page Next.js app, utilizing React and Typescript
+          technologies, with life cycle stages including the RSVP phase, Hype
+          phase, Test phase, Live phase, and Ended phase.
           <Break />
-          App maintained constantly changing state of an LP event by having each
-          client send updates via HTTP requests to a data layer that
-          orchestrated all data points to relevant backend micro services.
+          LPs manage data by having clients send HTTP requests to a data layer,
+          which then orchestrates all data points to relevant backend micro
+          services. All events are then disseminated to all attendees over a
+          WebSocket connection, where the client synchronizes all streamed
+          content via client level state management system.
           <Break />
-          Aggregated data disseminated to all LP attendees over a WebSocket
-          connection, where the client synchronizes all streamed content via
-          client level state management system.
-          <Break />
-          Client state management built in house, using custom reducers, hooks,
-          and providers, to synchronize streamed Spotify playback and LiveKit
+          Client state management was built in house, using custom reducers,
+          hooks, and providers, to synchronize streamed Spotify playback and
           audio.
         </Paper>
 
-        <div style={{ padding: "96px 0", textAlign: "center" }}>
-          <Image
-            src={listeningPartiesDesktop}
-            alt="Desktop layout of LP event"
-          />
-          <Caption>
-            This is the view an attendee sees when the hosts of the LP end the
-            event.
-          </Caption>
-        </div>
+        <h1 className="scroll-text-animation">Swipe left for more</h1>
+        <ResponsiveImageCardContainer>
+          {spotifyDesktopImages.map((desktopImage: ImageCard, i: number) => (
+            <div key={i} style={{ margin: "8px" }}>
+              <Card style={{ margin: "16px" }}>
+                <Image
+                  src={desktopImage.img}
+                  alt="Desktop layout of LP event"
+                  width={300}
+                />
+              </Card>
+              <Caption>
+                <b>{desktopImage.subtitle}: </b>
+                {desktopImage.caption}
+              </Caption>
+            </div>
+          ))}
+        </ResponsiveImageCardContainer>
+
+        <Break />
+        <Break />
+        <Break />
 
         <StickyNote
           svg={leadershipByMe}
@@ -216,14 +243,11 @@ export default function Spotify() {
           directors, and other Spotify leadership.
         </Paper>
 
-        <div style={{ padding: "96px 0", textAlign: "center" }}>
-          <Image src={listeningPartiesTablet} alt="Tablet layout of LP event" />
-          <Caption>
-            This is the view an artist sees when they are testing out their
-            audio and music playback capabilities on their tablet, before going
-            live in an LP.
-          </Caption>
-        </div>
+        <Break />
+        <Break />
+        <Break />
+        <Break />
+        <Break />
 
         <StickyNote
           svg={testingAndDocsByMe}
@@ -265,29 +289,36 @@ export default function Spotify() {
           behavior instrumentation, and responsive styling.
         </Paper>
 
-        <Image
-          src={shopWebDesktop}
-          alt="Desktop view of Spotify's online merch store"
-          style={{ marginTop: "48px" }}
-        />
-        <Caption>
+        <Break />
+        <Break />
+
+        <Card style={{ margin: "20px" }}>
+          <Image
+            src={shopWebDesktop}
+            alt="Desktop view of Spotify's online merch store"
+            width={300}
+          />
+        </Card>
+        <Caption style={{ margin: "8px 16px" }}>
           This is what a Spotify user will see upon{" "}
-          <a href="https://shop.spotify.com/en/artist/06HL4z0CvFAxyc27GXpf02/product/the-tortured-poets-department-cassette-bonus-track-the-manuscript">
-            navigating to this product page for Taylor Swift&apos;s Cassette +
-            Bonus Track on the desktop shop.
+          <a href="https://shop.spotify.com/en/artist/2YZyLoL8N0Wb9xBt1NhZWg/product/good-kid-m-a-a-d-city-cassette">
+            navigating to this product page for Kendrick Lamar&apos;s &apos;good
+            kid, m.A.A.d city&apos; Cassette on the desktop shop.
           </a>
         </Caption>
-
-        <Image
-          src={shopWebiPhone}
-          alt="Mobile view of Spotify's online merch store"
-          style={{ paddingTop: "64px" }}
-        />
-        <Caption>
-          This is what a Spotify user will see upon{" "}
-          <a href="https://shop.spotify.com/en/artist/06HL4z0CvFAxyc27GXpf02/store?container_platform=">
-            navigating to Taylor Swift&apos;s store on mobile.
+        <Card style={{ margin: "28px" }}>
+          <Image
+            src={shopWebiPhone}
+            width={200}
+            alt="Mobile view of Spotify's online merch store"
+          />
+        </Card>
+        <Caption style={{ margin: "8px 16px" }}>
+          This is what a Spotify user will see upon navigating to{" "}
+          <a href="https://shop.spotify.com/en/artist/2YZyLoL8N0Wb9xBt1NhZWg/store?container_platform=">
+            Kendrick Lamar&apos;s store{" "}
           </a>
+          on mobile.
         </Caption>
       </div>
     </Base>
