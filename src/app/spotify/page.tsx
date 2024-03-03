@@ -153,24 +153,26 @@ export default function Spotify() {
           </p>
         </div>
 
-        <h1 className="scroll-text-animation">Swipe left for more</h1>
-        <ResponsiveImageCardContainer>
-          {spotifyMobileImages.map((mobileImage: ImageCard, i: number) => (
-            <div key={i} style={{ margin: "0px 32px" }}>
-              <Card style={{ margin: "20px" }}>
-                <Image
-                  src={mobileImage.img}
-                  alt={mobileImage.subtitle}
-                  width={250}
-                />
-              </Card>
-              <Caption>
-                <b>{mobileImage.subtitle}: </b>
-                {mobileImage.caption}
-              </Caption>
-            </div>
-          ))}
-        </ResponsiveImageCardContainer>
+        <div style={{ padding: "64px 0", textAlign: "center" }}>
+          <h1 className="scroll-text-animation">Swipe left for more</h1>
+          <ResponsiveImageCardContainer>
+            {spotifyMobileImages.map((mobileImage: ImageCard, i: number) => (
+              <div key={i} style={{ margin: "0px 32px", maxWidth: "350px" }}>
+                <Card style={{ margin: "20px" }}>
+                  <Image
+                    src={mobileImage.img}
+                    alt={mobileImage.subtitle}
+                    width={250}
+                  />
+                </Card>
+                <Caption>
+                  <b>{mobileImage.subtitle}: </b>
+                  {mobileImage.caption}
+                </Caption>
+              </div>
+            ))}
+          </ResponsiveImageCardContainer>
+        </div>
 
         <Break />
         <Break />
@@ -202,7 +204,7 @@ export default function Spotify() {
         <h1 className="scroll-text-animation">Swipe left for more</h1>
         <ResponsiveImageCardContainer>
           {spotifyDesktopImages.map((desktopImage: ImageCard, i: number) => (
-            <div key={i} style={{ margin: "8px" }}>
+            <div key={i} style={{ margin: "8px", maxWidth: "350px" }}>
               <Card style={{ margin: "16px" }}>
                 <Image
                   src={desktopImage.img}
@@ -280,7 +282,15 @@ export default function Spotify() {
 
       {/* Section 4: shop web content */}
 
-      <div style={{ textAlign: "center", padding: "16px 0" }}>
+      <div
+        style={{
+          textAlign: "center",
+          padding: "16px 0",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
         <Paper small>
           I oversaw the deployment and ongoing upkeep of Spotify&apos;s retail
           store, bringing about improvements that benefited millions of users on

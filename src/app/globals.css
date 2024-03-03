@@ -30,6 +30,11 @@
   display: inline-block;
   font-size: 16px;
   margin: 96px 0 0 0;
+
+  /* smaller desktops */
+  @media only screen and (min-width: 800px) {
+    display: none;
+  }
 }
 
 @keyframes textclip {

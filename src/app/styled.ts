@@ -8,6 +8,7 @@ export const Card = styled.div`
   padding: 16px;
   display: flex;
   justify-content: center;
+  max-width: 300px;
 
   /* smaller desktops */
   @media only screen and (min-width: 1200px) {
@@ -22,6 +23,7 @@ export const Card = styled.div`
 
 export const Caption = styled.p`
   font-size: 12px;
+  max-width: 300px;
 `
 
 export const ResponsiveSectionOne = styled.div`
